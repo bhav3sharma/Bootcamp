@@ -1,0 +1,13 @@
+def bootcamp():
+    inputlist = []
+    print('Enter values to be input, integers only please! \nType exit to exit')
+    while True:
+        inputval = input()
+        if inputval == 'exit':
+            break
+        inputlist+=[int(inputval)]
+    inputlist.sort()
+    evenlist = [x for x in inputlist if x%2==0]
+    oddlist = [x for x in inputlist if x not in evenlist]
+    finallist = [(x,y) for x in evenlist for y in oddlist]
+    print(finallist)
